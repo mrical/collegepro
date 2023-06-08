@@ -5,14 +5,14 @@ import { NavLink, Outlet } from "react-router-dom";
 function HelpLayout() {
   return (
     <div>
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+      <div className="my-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
           <nav>
             <NavLink
               to="faq"
               className={({ isActive }) =>
                 classNames({
-                  "text-black rounded-md border bg-white": true,
+                  "text-black rounded-md border bg-white p-2": true,
                   "bg-blue-400": isActive,
                 })
               }
@@ -23,7 +23,7 @@ function HelpLayout() {
               to="contact"
               className={({ isActive }) =>
                 classNames({
-                  "text-black rounded-md border bg-white": true,
+                  "text-black rounded-md border bg-white p-2": true,
                   "bg-blue-400": isActive,
                 })
               }

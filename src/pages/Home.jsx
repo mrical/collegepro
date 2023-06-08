@@ -28,7 +28,7 @@ function Home() {
   const [envelopesArray, setEnvelopesArray] = useState([]);
   const { user } = useContext(UserContext);
   const { envelopes } = useContext(EnvelopesContext);
-  
+
   useEffect(() => {
     if (envelopes) {
       setEnvelopesArray(Object.values(envelopes));
@@ -95,6 +95,18 @@ function Home() {
                     <div className="sm:flex sm:items-start">
                       <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
                         {/* <ExclamationTriangleIcon className="h-6 w-6 text-red-600" aria-hidden="true" /> */}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
                       </div>
                       <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                         <Dialog.Title
@@ -238,10 +250,10 @@ function Home() {
                     </span>
                   </div>
                 </Link>
-                <div className="flex-1 flex justify-between">
-                  <button className="bg-green-400 text-white rounded-md px-2 py-1">
+                <div className="flex-1 flex justify-end">
+                  {/* <button className="bg-green-400 text-white rounded-md px-2 py-1">
                     Edit
-                  </button>
+                  </button> */}
                   <button
                     className="bg-red-400 text-white rounded-md px-2 py-1"
                     onClick={() => deleteEnvelope(envelope.envelopeId)}

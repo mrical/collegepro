@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-lg">
+    <div className="my-8 sm:mx-auto sm:w-full sm:max-w-lg">
       <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
         <div className="text-center font-semibold text-green-500">About</div>
         <p className="mb-3">
